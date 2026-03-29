@@ -1,7 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, SafeAreaView } from 'react-native';
-import { Wrench, Crown, Check, Shield } from '@expo/vector-icons';
 
 export default function App() {
   return (
@@ -11,7 +10,7 @@ export default function App() {
         <View style={styles.header}>
           <View style={styles.logoContainer}>
             <View style={styles.logo}>
-              <Wrench size={20} color="#fff" />
+              <Text style={styles.logoIcon}>🔧</Text>
             </View>
             <Text style={styles.logoText}>TrendyTrailer</Text>
           </View>
@@ -20,7 +19,7 @@ export default function App() {
         {/* Hero */}
         <View style={styles.hero}>
           <View style={styles.badge}>
-            <Crown size={14} color="#fff" />
+            <Text style={styles.badgeIcon}>👑</Text>
             <Text style={styles.badgeText}>LIFETIME MEMBERSHIP</Text>
           </View>
           
@@ -45,11 +44,11 @@ export default function App() {
 
           <View style={styles.heroFeatures}>
             <View style={styles.heroFeature}>
-              <Check size={16} color="#22c55e" />
+              <Text style={styles.heroFeatureIcon}>✅</Text>
               <Text style={styles.heroFeatureText}>Lifetime access</Text>
             </View>
             <View style={styles.heroFeature}>
-              <Shield size={16} color="#22c55e" />
+              <Text style={styles.heroFeatureIcon}>🛡️</Text>
               <Text style={styles.heroFeatureText}>No monthly fees</Text>
             </View>
           </View>
@@ -94,7 +93,7 @@ export default function App() {
             One payment. Lifetime value.
           </Text>
           <TouchableOpacity style={styles.ctaButtonLarge}>
-            <Crown size={20} color="#fff" />
+            <Text style={styles.ctaButtonLargeIcon}>👑</Text>
             <Text style={styles.ctaButtonLargeText}>Get Lifetime Access — $149</Text>
           </TouchableOpacity>
         </View>
@@ -129,6 +128,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  logoIcon: {
+    fontSize: 18,
+  },
   logoText: {
     fontSize: 18,
     fontWeight: '800',
@@ -149,6 +151,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 8,
     marginBottom: 20,
+  },
+  badgeIcon: {
+    fontSize: 14,
   },
   badgeText: {
     color: '#fff',
@@ -216,6 +221,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
+  },
+  heroFeatureIcon: {
+    fontSize: 14,
   },
   heroFeatureText: {
     fontSize: 12,
@@ -285,6 +293,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     paddingVertical: 18,
     borderRadius: 14,
+  },
+  ctaButtonLargeIcon: {
+    fontSize: 18,
   },
   ctaButtonLargeText: {
     color: '#fff',
